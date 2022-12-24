@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>번개장터 | 상품등록</title>
+    <link rel="shortcut icon" href="images/common/thunder_icon.ico">
+
+    <!--아이콘-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+    <!--부트스트랩-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+<body>
+    <a id="skipNav" href="#main_content">본문 바로가기</a>
+
+    <div id="wrapper">
+
+        <!--메인 컨텐츠-->
+        <div id="main_content">
+            <!--하위 메뉴-->
+            <nav class="content_nav">
+                <a href="" class="active">상품등록</a>
+                <a href="">상품관리</a>
+                <a href="">구매/판매 내역</a>
+            </nav>
+            
+            <!--본문 내용-->
+            <section class="goods_group">
+                <form class="my_goods_search">
+                    <input type="text" name="goodsTitle">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </form>
+                <ul class="all_goods_show_num">
+                    <li class="all_goods_num"><span class="arrow"></span></li>
+                    <li class="option"><a href="">10개씩</a></li>
+                    <li class="option"><a href="">20개씩</a></li>
+                    <li class="option"><a href="">50개씩</a></li>
+                    <li class="option"><a href="">100개씩</a></li>
+                </ul>
+                <ul class="all_goods_show_status">
+                    <li class="all_goods_status"><span class="arrow"></span></li>
+                    <li class="option"><a href="">전체</a></li>
+                    <li class="option"><a href="">판매 중</a></li>
+                    <li class="option"><a href="">예약 중</a></li>
+                    <li class="option"><a href="">판매완료</a></li>
+                </ul>
+            </section>
+            <section class="goods_manage_area">
+                <!--삭제 제외 다른 상태 변경 후 확인 알림-->
+                <div class="ok_modal_area">
+                    <p>상품 상태가 변경되었습니다.</p>
+                    <button type="button">확인</button>
+                </div>
+                <!--거래 이력 있으면 밑에 알림-->
+                <div class="delete_modal_area">
+                    <p>거래를 시도했던 이력이 있는 상품입니다. <br>정말 삭제하시겠습니까?</p>
+                    <p><button type="button" class="cancle">취소</button><a href="삭제">확인</a></p>
+                </div>
+                <!--거래 이력 없으면 밑에 알림-->
+                <div class="delete_modal_area">
+                    <p>상품을 삭제하시겠습니까?</p>
+                    <p><button type="button" class="cancle">취소</button><a href="삭제">확인</a></p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>사진</th>
+                            <th>판매상태</th>
+                            <th>상품명</th>
+                            <th>가격</th>
+                            <th>안전결제 환영</th>
+                            <th>찜</th>
+                            <th>최근수정일</th>
+                            <th>기능</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="images/goods_ex.jpg" alt="상품 사진"></td>
+                            <td>
+                                <ul>
+                                    <li class="show"><span class="arrow"></span></li>
+                                    <li class="option"><a href="">판매 중</a></li>
+                                    <li class="option"><a href="">예약 중</a></li>
+                                    <li class="option"><button type="button">삭제</button></li>
+                                    <li class="option"><a href="">판매완료</a></li>
+                                </ul>
+                            </td>
+                            <td><a href="상품페이지">상품명</a></td>
+                            <td>1,111원</td>
+                            <td>O</td>
+                            <td>1</td>
+                            <td>2022-12-16<br>16:14</td>
+                            <td>
+                                <button type="button">UP</button><br>
+                                <a href="수정폼">수정</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="paging">
+                <a href=""><img src="images/goods/arrow.svg" alt="맨 앞 페이지"></a>
+                <a href="" class="active_page">1</a>
+                <a href="" class="active_page">2</a>
+                <a href="" class="active_page">3</a>
+                <a href=""><img src="images/goods/arrow.svg" alt="맨 뒷 페이지"></a>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
