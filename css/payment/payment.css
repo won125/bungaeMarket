@@ -35,6 +35,7 @@ header > div {
 }
 header > div > i {
     font-size: 17px;
+    cursor: pointer;
 }
 /* // header 영역 */
 
@@ -99,6 +100,8 @@ header > div > i {
 .delivery_content > div  span {
     text-decoration: underline;
     float: right;
+    color: #00A587;
+    font-weight: bold;
 }
 .delivery_content > div > p:nth-last-child(1) {
     height: 60px;
@@ -223,7 +226,6 @@ header > div > i {
     color: #7F7F7F;
     font-weight: bold;
     font-size: 18px;
-    
 }
 /* // 결제 수단 */
 
@@ -267,7 +269,6 @@ header > div > i {
 }
 #event > div > div > p {
     margin-top: 5px;
-    
     width: 248.5px;
     font-size: 13px;
 }
@@ -288,8 +289,6 @@ header > div > i {
 }
 
 /* 약관 동의 */
-.agree_content > div {
-}
 .agree_content > div > i {
     background-color: rgb(229, 229, 229);
     color: white;
@@ -299,6 +298,7 @@ header > div > i {
     display: inline-block;
     border-radius: 50%;
     margin-top: 1px;
+    cursor: pointer;
 }
 .agree_content > div > i::before {
     margin: 0 0 4px 4px;
@@ -336,6 +336,4 @@ header > div > i {
     padding: 14px;
     border-radius: 5px;
 }
-
-
 /* // 약관 동의 */
