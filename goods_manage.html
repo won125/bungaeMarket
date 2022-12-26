@@ -21,17 +21,47 @@
 
     <div id="wrapper">
 
+        <!--삭제 제외 다른 상태 변경 후 확인 알림-->
+        <div class="ok_modal_area">
+            <div class="ok_modal_bg bg"></div>
+            <div class="ok_modal">
+                <p>상품 상태가 변경되었습니다.</p>
+                <button type="button">확인</button>
+            </div>
+        </div>
+        <!--거래 이력 있으면 밑에 알림-->
+        <div class="delete_history_yes_modal_area">
+            <div class="delete_modal_bg bg"></div>
+            <div class="delete_history_yes_modal">
+                <p>거래를 시도했던 이력이 있는 상품입니다. <br>정말 삭제하시겠습니까?</p>
+                <p>
+                    <button type="button" class="cancle">취소</button>
+                    <a href="삭제">확인</a>
+                </p>
+            </div>
+        </div>
+        <!--거래 이력 없으면 밑에 알림-->
+        <div class="delete_history_no_modal_area">
+            <div class="delete_modal_bg bg"></div>
+            <div class="delete_history_no_modal">
+                <p>상품을 삭제하시겠습니까?</p>
+                <p>
+                    <button type="button" class="cancle">취소</button>
+                    <a href="삭제">확인</a>
+                </p>
+            </div>
+        </div>
         <!--메인 컨텐츠-->
         <div id="main_content">
             <!--하위 메뉴-->
             <nav class="content_nav">
                 <a href="" class="active">상품등록</a>
                 <a href="">상품관리</a>
-                <a href="">구매/판매 내역</a>
+                <a href="" target="_blank">구매/판매 내역</a>
             </nav>
             
             <!--본문 내용-->
-            <section class="goods_group">
+            <section class="goods_filter_area">
                 <form class="my_goods_search">
                     <input type="text" name="goodsTitle">
                     <button type="button"><i class="fas fa-search"></i></button>
@@ -52,21 +82,7 @@
                 </ul>
             </section>
             <section class="goods_manage_area">
-                <!--삭제 제외 다른 상태 변경 후 확인 알림-->
-                <div class="ok_modal_area">
-                    <p>상품 상태가 변경되었습니다.</p>
-                    <button type="button">확인</button>
-                </div>
-                <!--거래 이력 있으면 밑에 알림-->
-                <div class="delete_modal_area">
-                    <p>거래를 시도했던 이력이 있는 상품입니다. <br>정말 삭제하시겠습니까?</p>
-                    <p><button type="button" class="cancle">취소</button><a href="삭제">확인</a></p>
-                </div>
-                <!--거래 이력 없으면 밑에 알림-->
-                <div class="delete_modal_area">
-                    <p>상품을 삭제하시겠습니까?</p>
-                    <p><button type="button" class="cancle">취소</button><a href="삭제">확인</a></p>
-                </div>
+                <!--상품 정보 출력-->
                 <table>
                     <thead>
                         <tr>
