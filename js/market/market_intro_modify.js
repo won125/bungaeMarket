@@ -16,13 +16,13 @@ $(document).ready(function(){
 
 /* 하단 상품메뉴의 카테고리 호버 시 */
 $(document).ready(function(){
-    $("#product_cate").hover(function(){
+    $("#goods_cate").hover(function(){
         $('.hidden_menu').css('display','block');
     })
 })
 /* 하단 상품메뉴의 카테고리 떠날 시 */
 $(document).ready(function(){
-    $("#product_cate").mouseleave(function(){
+    $("#goods_cate").mouseleave(function(){
         $('.hidden_menu').css('display', 'none');
     })
 })
@@ -48,10 +48,10 @@ function fn_border(change) {
 
 
 $(document).ready(function(){
-    $(".product_menu").click(function(){
+    $(".goods_menu").click(function(){
         common();
         $('.common_menu').css('display', 'none');
-        $('#product_menu_area').css('display', 'block');
+        $('#goods_menu_area').css('display', 'block');
         fn_border(this);
         $('.follower_menu').css('borderRight', '1px solid rgb(238, 238, 238)');
     })
@@ -63,7 +63,7 @@ $(document).ready(function(){
         $('.common_menu').css('display', 'none');
         $('#review_menu_area').css('display', 'block');
         fn_border(this);
-        $('.product_menu').css('borderLeft', '1px solid rgb(238, 238, 238)');
+        $('.goods_menu').css('borderLeft', '1px solid rgb(238, 238, 238)');
         $('.follower_menu').css('borderRight', '1px solid rgb(238, 238, 238)');
     })
 })
@@ -74,7 +74,7 @@ $(document).ready(function(){
         $('.common_menu').css('display', 'none');
         $('#recommend_menu_area').css('display', 'block');
         fn_border(this);
-        $('.product_menu').css('borderLeft', '1px solid rgb(238, 238, 238)');
+        $('.goods_menu').css('borderLeft', '1px solid rgb(238, 238, 238)');
         $('.follower_menu').css('borderRight', '1px solid rgb(238, 238, 238)');
     })
 })
@@ -85,7 +85,7 @@ $(document).ready(function(){
         $('.common_menu').css('display', 'none');
         $('#following_menu_area').css('display', 'block');
         fn_border(this);
-        $('.product_menu').css('borderLeft', '1px solid rgb(238, 238, 238)');
+        $('.goods_menu').css('borderLeft', '1px solid rgb(238, 238, 238)');
         $('.follower_menu').css('borderRight', '1px solid rgb(238, 238, 238)');
     })
 })
@@ -96,6 +96,6 @@ $(document).ready(function(){
         $('.common_menu').css('display', 'none');
         $('#follower_menu_area').css('display', 'block');
         fn_border(this);
-        $('.product_menu').css('borderLeft', '1px solid rgb(238, 238, 238)');
+        $('.goods_menu').css('borderLeft', '1px solid rgb(238, 238, 238)');
     })
 })

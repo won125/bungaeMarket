@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세페이지</title>
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- 부트스트랩 icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <!-- 부트스트랩 js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- 공통 CSS -->
+    <link rel="stylesheet" href="css/market/common.css">
+    <!-- 상세페이지 CSS -->
+    <link rel="stylesheet" href="css/goods/goods_product_detail.css">
+
+    <!-- 햄버거 메뉴 호버시 -->
+    <script src="js/market/jquery-3.6.0.min.js"></script>
+    <script src="js/market/menu_hover.js"></script>
+    <script src="js/goods/goods_detail_menu.js"></script>
+    <!-- 파비콘 -->
+    <link rel="icon" href="images/market/favicon.ico">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header 영역 -->
+        <header>
+            <div id="top_header_bot_border">
+                <div id="top_header">
+                        <div class="container text-center">
+                            <div id="top_header_menu" class="row justify-content-between">
+                                <div class="col-4 top_header_icon">
+                                    <a href="#">
+                                        <img src="images/market/download.svg" alt="앱 다운로드"> 앱다운로드
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/market/bookmark.svg" alt="즐겨찾기"> 즐겨찾기
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <div class="row justify-content-end top_header_login">
+                                        <div class="col-4">
+                                            <a href="#">
+                                                로그인/회원가입
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="my_store.html">
+                                                내상점
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </header>
+        <div id="bot_header_border">
+            <div id="bot_header">
+                <div class="container text-center">
+                    <div class="row justify-content-start">
+                        <div class="col-3 header_logo">
+                            <h1 class="hidden">로고</h1>
+                            <a href="">
+                                <img src="images/market/logo.svg" alt="번개장터 로고">
+                            </a>
+                        </div>
+                        <div class="col-6 top_searh_area">
+                            <div id="top_searh">
+                                <input type="text" placeholder="상품명, 지역명, @상점명 입력">
+                                <img src="images/market/search.png" alt="검색">
+                            </div>
+                        </div>
+                        <div class="col-1 b_h_left_menu">
+                            <a href="#">
+                                <img src="images/market/sell.png" alt="판매하기">
+                                판매하기
+                            </a>
+                        </div>
+                        <div class="col-1 b_h_left_menu store">
+                            <a href="my_store.html">
+                                <img src="images/market/my_store.png" alt="내상점">
+                                내상점
+                            </a>
+                        </div>
+                        <div class="col-1 b_h_left_menu">
+                            <a href="#">
+                                <img src="images/market/talk.png" alt="번개톡">
+                                번개톡
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-center hamburger_area">
+                    <div class="row">
+                        <div class="col-md-1 hamburger">
+                            <img id="menu" src="images/market/hamburger.png" alt="메뉴">
+                        </div>
+                        <div class="col-md-4 sell_center">
+                            <p>
+                                번개장터 판매자센터
+                                <img src="images/market/new_img.png" alt="새로워졌어요">
+                            </p>
+                        </div>
+                        <!-- 메뉴 호버 -->
+                        <div id="test_area">
+                            <ul id="test_cates">
+                                <h2>전체 카테고리<span> ></span></h2>
+                                <li id="clothes"><a href="#">의류</a></li>
+                                <li id="acc"><a href="#">악세서리</a></li>
+                            </ul>
+                            <ul id="test_clos">
+                                <h3>의류</h3>
+                                <li><a href="#">남성의류</a></li>
+                                <li><a href="#">여성의류</a></li>
+                            </ul>
+                            <ul id="test_accs">
+                                <h3>악세서리</h3>
+                                <li><a href="#">시계/쥬얼리</a></li>
+                                <li><a href="#">패션 악세서리</a></li>
+                            </ul>
+                        </div>
+                        <!-- // 메뉴 호버 -->
+                    </div>
+                </div>
+                <div id="side_bar">
+                    <div id="heart">
+                        <p>찜한 상품</p>
+                        <p><img src="images/market/heart.png" alt="찜 하트"> 0</p>
+                    </div>
+                    <div id="goods">
+                        <p>최근본상품</p>
+                        <p id="dotted"></p>
+                        <p>
+                            <img src="images/market/eyes.png" alt="눈표시">
+                            <p>최근 본 상품<br>이<br>없습니다.</p>
+                        </p>
+                    </div>
+                    <div id="QR_code">
+                        <p>앱 다운로드</p>
+                        <p>
+                            <img src="images/market/QR_code.png" alt="QR 코드">
+                        </p>
+                    </div>
+                    <div id="top_btn">
+                        <button>
+                            <a href="#top_header">TOP</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // header 영역 -->
+
+        <!-- main_content 영역 -->
+        <div id="main_content">
+            <!-- category -->
+            <div id="category">
+                <div id="category_left">
+                    <div>
+                        <p id="home">
+                            <span>
+                                <img src="images/goods/home.png" alt="home">
+                            </span>
+                            <span>홈</span>
+                        </p>
+                        <p id="entire">
+                            <span>
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                            <span>
+                                <ul class="entire_bar">
+                                    <li><a href="#">의류</a></li>
+                                    <li class="hidden_menu"><a href="#">악세서리</a></li>
+                                </ul>
+                                <i class="bi bi-chevron-down under_direction"></i>
+                            </span>
+                            
+                        </p>
+                        <p id="category_clothes">
+                            <span>
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                            <span>
+                                <ul class="category_clothes_bar">
+                                    <li><a href="#">남성의류</a></li>
+                                    <li class="hidden_menu"><a href="#">여성의류</a></li>
+                                </ul>
+                                <i class="bi bi-chevron-down under_direction"></i>
+                            </span>
+                            
+                        </p>
+                        <p id="category_acc">
+                            <span>
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                            <span>
+                                <ul class="category_acc_bar">
+                                    <li><a href="#">시계/쥬얼리</a></li>
+                                    <li class="hidden_menu"><a href="#">패션 악세서리</a></li>
+                                </ul>
+                                <i class="bi bi-chevron-down under_direction"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div id="category_right">
+                    <img src="images/goods/sale.png" alt="할인 받기">
+                </div>
+            </div>
+            <!-- // category -->
+
+            <!-- detail_content -->
+            <div id="detail_content">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col detail_content_img">
+                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active change" id="change1" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" id="change2" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" id="change3" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/goods/test_img.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/goods/test_img.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/goods/test_img.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col detail_content_info">
+                            <h2>상품명</h2>
+                            <p>00,000<span>원</span></p>
+                            <hr>
+                            <div id="detail_content_info_mid">
+                                <p>
+                                    <img src="images/goods/heart.png" alt="찜">
+                                    <span>0</span>
+                                </p>
+                                <p>
+                                    <img src="images/goods/eye.png" alt="조회">
+                                    <span>0</span>
+                                </p>
+                                <p>
+                                    <img src="images/goods/time.png" alt="지난 시간">
+                                    <span>0일 전</span>
+                                </p>
+                                <p>
+                                    <img src="images/goods/report.png" alt="신고">
+                                    <span>신고하기</span>
+                                </p>
+                            </div>
+                            <div id="detail_content_info_state">
+                                <p>
+                                    <span>· 상품상태</span>
+                                    <span>중고</span>
+                                </p>
+                                <p>
+                                    <span>· 교환여부</span>
+                                    <span>교환불가능</span>
+                                </p>
+                                <p>
+                                    <span>· 배송비</span>
+                                    <span class="shipping">배송비 별도</span>
+                                </p>
+                                <p>
+                                    <span>· 거래지역</span>
+                                    <span><img src="images/goods/place.png" alt="주소"> 주소</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="container text-center detail_content_info_btn">
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <div class="p-3 info_btn1">
+                                                <img src="images/goods/w_heart.svg" alt="찜"> 찜 <span>0</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="p-3 info_btn2">
+                                                <img src="images/goods/talk.png" alt="번개톡"> 번개톡
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="p-3 info_btn3">바로구매</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // detail_content -->
+
+            <!-- related_goods -->
+            <div id="related_goods">
+                <div>
+                    <h3>연관 상품</h3>
+                    <p>AD<span><img src="images/goods/i.svg" alt="AD"></span></p>
+                </div>
+                <div class="container text-center" id="related_goods_imgs">
+                    <div class="row g-2">
+                        <div class="col-2 goods_list">
+                            <div class="related_goods_img">
+                                <a href="#">
+                                    <img src="images/goods/test_img.jpg" alt="연관상품">
+                                    <p>연관 상품 목록</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2 goods_list">
+                            <div class="related_goods_img">
+                                <a href="#">
+                                    <img src="images/goods/test_img.jpg" alt="연관상품">
+                                    <p>연관 상품 목록</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2 goods_list">
+                            <div class="related_goods_img">
+                                <a href="#">
+                                    <img src="images/goods/test_img.jpg" alt="연관상품">
+                                    <p>연관 상품 목록</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2 goods_list">
+                            <div class="related_goods_img">
+                                <a href="#">
+                                    <img src="images/goods/test_img.jpg" alt="연관상품">
+                                    <p>연관 상품 목록</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2 goods_list">
+                            <div class="related_goods_img">
+                                <a href="#">
+                                    <img src="images/goods/test_img.jpg" alt="연관상품">
+                                    <p>연관 상품 목록</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2 goods_list">
+                            <div class="related_goods_img">
+                                <a href="#">
+                                    <img src="images/goods/test_img.jpg" alt="연관상품">
+                                    <p>연관 상품 목록</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // related_goods -->
+
+            <!-- url_images -->
+            <div id="url_images">
+                <p>
+                    <span>
+                        <img src="images/goods/naver.png" alt="Naver blog">
+                    </span>
+                    <span>
+                        <img src="images/goods/facebook.png" alt="Facebook">
+                    </span>
+                    <span>
+                        <img src="images/goods/twitter.png" alt="Twitter">
+                    </span>
+                    <span>
+                        <img src="images/goods/url.png" alt="URL">
+                    </span>
+                </p>
+            </div>
+            <!-- // url_images -->
+
+            <!-- goods_info -->
+            <div id="goods_info">
+                <div class="container text-center info_area">
+                    <div class="row g-2">
+                        <div class="col-8 info_area_left">
+                            <div class="info_content">
+                                <div>
+                                    <p>
+                                        상품정보
+                                    </p>
+                                </div>
+                                <div>
+                                    상품내용 입력란입니다.<br>
+                                    테스트메시지<br>
+                                </div>
+                            </div>
+                            <div class="p-3 detailed_information">
+                                <div class="container text-center ">
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <div class="p-3 detailed_information_place">
+                                                <img src="images/goods/bottom_place.png" alt="거래지역"> <span>거래지역</span>
+                                                <p>상세 주소</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="p-3 detailed_information_category">
+                                                <img src="images/goods/category.png" alt="카테고리"> <span>카테고리</span>
+                                                <p>상품 종류</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="p-3 detailed_information_tag">
+                                                <img src="images/goods/tag.png" alt="상품태그"> <span>상품태그</span>
+                                                <p>#최저가 #이벤트중</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="store_info_area">
+                                <div>
+                                    <p>
+                                        상점정보
+                                    </p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <img src="images/goods/store.svg" alt="상점명">
+                                        </div>
+                                        <div>
+                                            <p>
+                                                상점명
+                                            </p>
+                                            <p>
+                                                <p>
+                                                    상품 <span>0</span>
+                                                </p>
+                                                <p>
+                                                    팔로워 <span>0</span>
+                                                </p>
+                                            </p>
+                                        </div>
+                                        <div id="store_follow">
+                                            <button>
+                                                <img src="images/goods/follow.png" alt="팔로우">팔로우
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <img src="images/goods/test_img.jpg" alt="상품 더보기">
+                                        <img src="images/goods/test_img.jpg" alt="상품 더보기">
+                                    </div>
+                                    <div>
+                                        <p><span>0개</span> 상품 더보기 ></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>상점후기 <span>0</span></p>
+                                    <div>
+                                        <p>
+                                            등록된 후기가 없습니다.<br>
+                                            첫 후기를 등록해보세요!
+                                        </p>
+                                        <button>
+                                            후기작성
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button>
+                                        <img src="images/goods/talk.png" alt="번개톡"> 번개톡
+                                    </button>
+                                    <button>바로구매</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // goods_info -->
+        <!-- // main_content 영역 -->
+
+        <!-- footer 영역 -->
+        <footer>
+            <div id="top_footer_border_area">
+                <div id="top_footer_area">
+                    <ul>
+                        <li>회사소개</li>
+                        <li>이용약관</li>
+                        <li>운영정책</li>
+                        <li>개인정보처리방침</li>
+                        <li>청소년보호정책</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="mid_footer_area" class="container text-center">
+                <div class="row">
+                    <div class="col mid_footer_areas">
+                        <div class="mid_footer_left">
+                            <p>번개장터(주) 사업자정보</p>
+                            <p>
+                                대표이사 : 최재화, 강승현 | 개인정보보호책임자 : 문제근<br>
+                                사업자등록번호 : 113-86-45836 | 통신판매업신고 : 2019-서울서초-1126<br>
+                                호스팅서비스 제공자 : Amazon Web Services (AWS)<br>
+                                EMAIL : help@bunjang.co.kr | FAX : 02-598-8241<br>
+                                주소 : 서울특별시 서초구 서초대로 38길 12, 7, 10층<br>
+                                (서초동, 마제스타시티, 힐스테이트 서리풀)<br>
+                                <span>사업자정보 확인</span>
+                            </p>
+                        </div>
+                        <div class="mid_footer_left2">
+                            <div>
+                                <p>
+                                    <b>번개장터(주)더현대서울점</b> | 최재화, 강승현 | 365-85-01581<br>
+                                    서울특별시 영등포구 여의대로 108, 지하2층(여의도동, 파크원)<br>
+                                </p>
+                                <p>
+                                    <b>번개장터(주)코엑스점</b> | 최재화, 강승현 | 142-85-27412<br>
+                                    서울특별시 강남구 영동대로 513, 쇼핑몰동 B1층 C102호(삼성동, 코엑스)<br>
+                                </p>
+                                <p>
+                                    <b>번개장터(주)센터필드점</b> | 최재화, 강승현 | 808-85-01905<br>
+                                    서울특별시 강남구 테헤란로 231, 쇼핑몰동 1층 W124호(역삼동)(역삼동, 센터필드)<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mid_footer_right_area">
+                        <div class="mid_footer_right">
+                            <p>고객센터 ></p>
+                            <p>1670-2910</p>
+                            <p>운영시간 9시 - 18시 (주말/공휴일 휴무, 점심시간 12시 - 13시)</p>
+                            <span>공지사항</span> <span>문의하기</span><span>자주 묻는 질문</span>
+                        </div>
+                        <div id="mid_footer_right2">
+                            <p>우리은행 채무지급보증 안내</p>
+                            <p>
+                                번개장터㈜는 “BGZT Digital”, “BGZT Lab”, “BGZT Lab 1”, “BGZT Lab 2”, “BGZT 컬렉션” 상점이 판매한
+                                상품에 한해, 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+                            </p>
+                            <p>서비스 가입사실 확인</p>
+                            <p>Ⓒ Bungaejangter. Inc All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div id="bot_footer_area">
+                        <div class="bot_footer_left">
+                            <div>
+                                <img src="images/market/footer_img.png" alt="footer이미지">
+                            </div>
+                            <p>
+                                [인증범위] 번개장터 중고거래 플랫폼 서비스 운영(심사받지 않은 물리적 인프라 제외)<br>
+                                [유효기간] 2021.05.18 ~ 2024.05.17
+                            </p>
+                        </div>
+                        <div class="bot_footer_right">
+                            <p>“BGZT Digital”, “BGZT Lab”, “BGZT Lab 1”, “BGZT Lab 2”, “BGZT 컬렉션” 상점의 판매상품을 제외한 모든 상품들
+                                에 대하여, 번개장터㈜는 통신판매중개자로서 중고거래마켓 번개장터의 거래당사자가 아니며, 입점판매자가 등록한
+                                상품정보 및 거래에 대해 책임을 지지 않습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- // footer 영역 -->
+    </div>
+</body>
+</html>

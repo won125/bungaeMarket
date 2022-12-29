@@ -1,5 +1,5 @@
 
-/* 햄버거에 마우스 호버 시 */
+/* 카테고리 마우스 호버 시 */
 $(document).ready(function(){
     $(".entire_bar").hover(function(){
         $('.entire_bar > .hidden_menu').css('display','block');
@@ -11,7 +11,7 @@ $(document).ready(function(){
         $('.category_acc_bar > .hidden_menu').css('display','block');
     })
 })
-/* 햄버거에서 마우스 떠날 시 */
+/* 카테고리 마우스 떠날 시 */
 $(document).ready(function(){
     $(".entire_bar").mouseleave(function(){
         $('.entire_bar > .hidden_menu').css('display', 'none');
@@ -23,4 +23,3 @@ $(document).ready(function(){
         $('.category_acc_bar > .hidden_menu').css('display', 'none');
     })
 })
-

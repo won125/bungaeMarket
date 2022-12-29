@@ -10,7 +10,7 @@
     display: inline-block;
     width: 310px;
     height: 310px;
-    background-image: url(../../images/my_store/store_bg.PNG);
+    background-image: url(../../images/market/store_bg.PNG);
     text-align: center;
 }
 .my_store_left > div:nth-child(1) > img {
@@ -125,7 +125,7 @@
 #intro_modify > button {
     position: absolute;
     bottom: 0;
-    border: none;
+    border: 1px solid rgb(238, 238, 238);
     color: #888;
     font-size: 11px;
     background-color: white;
@@ -179,7 +179,7 @@
     margin-left: 10px;
 }
 
-.product_menu {
+.goods_menu {
     border-top: 1px solid black;
     border-right: 1px solid black;
     border-left: 1px solid black;
@@ -208,14 +208,14 @@
 .common_menu > div:nth-child(1) > p:nth-child(1) > span {
     color: #F72F33;
 }
-#product_menu_area > div > ul {
+#goods_menu_area > div > ul {
     float: right;
     border: 1px solid rgb(238, 238, 238);
     width: 140px;
     height: 28px;
     font-size: 12px;
 }
-#product_menu_area > div > ul > li {
+#goods_menu_area > div > ul > li {
     padding: 5px 0 5px 5px;
     width: 140px;
     height: 100%;

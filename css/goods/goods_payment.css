@@ -63,15 +63,15 @@ header > div > i {
 .pay_content_img > a > img {
     width: 50px;
 }
-.pay_content_product {
+.pay_content_goods {
     width: 540px;
     float: right;
 }
-.pay_content_product > p:nth-child(1) {
+.pay_content_goods > p:nth-child(1) {
     font-weight: bold;
     font-size: 19px;
 }
-.pay_content_product > p:nth-child(2) {
+.pay_content_goods > p:nth-child(2) {
     color: #7F7F7F;
 }
 /* // 상품 정보란 */

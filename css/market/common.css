@@ -100,7 +100,7 @@ header, #bot_header_border {
     width: 9px;
 }
 
-#product {
+#goods {
     padding: 10px;
     height: 174px;
     border: 1px solid #ccc;
@@ -110,11 +110,11 @@ header, #bot_header_border {
     background-color: white;
     margin-bottom: 6px;
 }
-#product > p:nth-child(1) {
+#goods > p:nth-child(1) {
     font-weight: bold;
     letter-spacing: -1px;
 }
-#product > p:nth-child(2) {
+#goods > p:nth-child(2) {
     width: 38px;
     display: inline-block;
     text-align: center;
@@ -122,11 +122,11 @@ header, #bot_header_border {
     position: relative;
     top: -7px;
 }
-#product > p:nth-child(3) img {
+#goods > p:nth-child(3) img {
     width: 28px;
     margin-top: 20px;
 }
-#product > p:nth-child(4) {
+#goods > p:nth-child(4) {
     margin-top: 8px;
     letter-spacing: -2px;
     line-height: 15px;
