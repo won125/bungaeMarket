@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>거래내역</title>
-    <link rel="shortcut icon" href="images/common/thunder_icon.ico">
+    <link rel="shortcut icon" href="images/market/thunder_icon.ico">
 
     <!--아이콘-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
@@ -25,11 +25,87 @@
             <h1>거래내역</h1>
             <!--메뉴-->
             <nav class="content_nav">
-                <a href="" class="active">구매</a>
-                <a href="">판매</a>
-                <a href="">정산</a>
+                <a href="goods_buy_history.html">구매</a>
+                <a href="goods_sell_history.html">판매</a>
+                <a href="goods_account.html" class="active">정산</a>
             </nav>
         </header>
+        
+        <!--계좌 모달-->
+        <div class="account_modal_area">
+            <div class="account_bg bg"></div>
+            <form action="" name="frm_account">
+                <p>예금주</p>
+                <input type="text" name="accountOwner">
+                <p>은행 선택</p>
+                <!--li 선택하면 hidden에 담아서 보내는 식
+                    테스트할 때는 text로 타입바꿔서 진행해주세요-->
+                <input type="hidden" name="accountBank">
+                <ul class="select_bank">
+                    <li class="selected_bank"></li>
+                    <li>신한은행</li>
+                    <li>국민은행</li>
+                    <li>우리은행</li>
+                    <li>하나은행</li>
+                    <li>농협은행</li>
+                    <li>카카오뱅크</li>
+                    <li>기업은행</li>
+                    <li>우체국</li>
+                    <li>수협중앙회</li>
+                    <li>한국씨티은행</li>
+                    <li>신협은행</li>
+                    <li>산업은행</li>
+                    <li>새마을금고</li>
+                </ul>
+                <p>계좌번호</p>
+                <input type="text" name="account">
+                <button type="button" class="btn_account_no">취소</button>
+                <button type="button" class="btn_account_yes">저장</button>
+            </form>
+        </div>
+
+        <!--메인 컨텐츠-->
+        <div id="main_content">
+            <!--계좌 영역-->
+            <div class="account_show_area">
+                <span>정산계좌</span>
+                <!--등록된 계좌 없을 때-->
+                <button type="button">정산계좌를 등록하세요. <span class="arrow"></span></button>
+                <!--등록된 계좌 있을 때-->
+                <!--
+                    <span class="account_show">
+                        <span>은행이름</span>
+                        <span>계좌번호</span>
+                    </span>
+                -->
+            </div>
+            <!--정산 상품 내역-->
+            <section class="calculate_area">
+                <div class="goods">
+                    <a href="goods_ordersheet.html" class="goods_one">
+                        <div class="goods_images_area">
+                            <img src="images/goods_ex.jpg" alt="거래 상품 이미지">
+                        </div>
+                        <div class="goods_info">
+                            <h2 class="goods_title">상품 글 제목</h2>
+                            <p class="goods_shop">상점명 / 번개페이 안전결제</p>
+                            <p class="goods_date">2022.12.16 (오후 04:37)</p>
+                        </div>
+                        <div class="goods_calculate">
+                            <p class="goods_price">1,111원</p>
+                            <!--등록된 계좌 없을 때-->
+                            <p class="goods_account_warn">정산계좌 미입력</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <p>
+                판매대금은 등록한 계좌번호로 정산일에 지급됩니다.
+                정산일 이후 미지급 상태인 경우 계좌번호를 다시 한 번 확인해주세요. 
+            </p>
+        </footer>
     </div>
 </body>
 </html>
