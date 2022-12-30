@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문상세내역</title>
+    <link rel="shortcut icon" href="images/market/thunder_icon.ico">
+
+    <!--아이콘-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+    <!--부트스트랩-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <a id="skipNav" href="#main_content">본문 바로가기</a>
+
+    <div id="wrapper">
+        <header>
+            <div class="back_area">
+                <h1>주문상세내역</h1>
+                <button type="button" class="pay_filter">
+                    <svg width="20" height="20" fill="#000" viewBox="0 0 20 20">
+                        <path d="M14.912 19.41a.999.999 0 00-.165-1.075L7.337 10l7.41-8.336A1 1 0 1013.253.335l-8 9a.999.999 0 000 1.328l8 9a.999.999 0 001.66-.254z" fill-rule="evenodd" fill="#000">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <!--계좌 모달-->
+        <div class="account_modal_area">
+            <div class="account_bg bg"></div>
+            <form action="" name="frm_account">
+                <p>예금주</p>
+                <input type="text" name="accountOwner">
+                <p>은행 선택</p>
+                <!--li 선택하면 hidden에 담아서 보내는 식
+                    테스트할 때는 text로 타입바꿔서 진행해주세요-->
+                <input type="hidden" name="accountBank">
+                <ul class="select_bank">
+                    <li class="selected_bank"></li>
+                    <li>신한은행</li>
+                    <li>국민은행</li>
+                    <li>우리은행</li>
+                    <li>하나은행</li>
+                    <li>농협은행</li>
+                    <li>카카오뱅크</li>
+                    <li>기업은행</li>
+                    <li>우체국</li>
+                    <li>수협중앙회</li>
+                    <li>한국씨티은행</li>
+                    <li>신협은행</li>
+                    <li>산업은행</li>
+                    <li>새마을금고</li>
+                </ul>
+                <p>계좌번호</p>
+                <input type="text" name="account">
+                <button type="button" class="btn_account_no">취소</button>
+                <button type="button" class="btn_account_yes">저장</button>
+            </form>
+        </div>
+
+        <!--메인 컨텐츠-->
+        <div id="main_content">
+            <div class="goods">
+                <div class="images_area">
+                    <img src="images/goods_ex.jpg" alt="상품 이미지">
+                </div>
+                <div class="goods_info">
+                    <p>
+                        <span>거래완료</span>
+                        <span>1,111원</span>
+                    </p>
+                    <p>상품 타이틀</p>
+                </div>
+            </div>
+            <p class="change_message">
+                거래는 만족스러우셨나요? 따뜻한 후기를 남겨주세요!
+            </p>
+            <!--
+                message : 거래 취소 완료! 환불이 처리되었습니다.
+                message : 상품 배송 완료! 상품을 확인해주세요.
+            -->
+            <div class="calculate_info">
+                <h2>정산정보</h2>
+                <h3>1,111원<span>정산예정</span></h3>
+                <div class="goods_price">
+                    <span>상품금액</span>
+                    <span>1,111원</span>
+                </div>
+                <div class="calculate_account">
+                    <span>상품금액</span>
+                    <span>
+                        <!--등록 계좌 없을 때-->
+                        <button>정산받을 계좌를 등록해주세요<span class="black_arrow"></span></button>
+                        <!--등록 계좌 있을 때-->
+                        <!--
+                            <span>은행계좌</span>
+                            <span>계좌번호</span>
+                        -->    
+                    </span>
+                </div>
+            </div>
+            <div class="change_info">
+                <h2>거래정보</h2>
+                <div class="change_way">
+                    <span>거래방법</span>
+                    <span>택배거래</span>
+                </div>
+                <div class="order_num">
+                    <span>주문번호</span>
+                    <span>123456</span>
+                </div>
+                <div class="order_date">
+                    <span>주문일시</span>
+                    <span>2022/12/16 (16:36:44)</span>
+                </div>
+                <div class="buyer">
+                    <span>구매자</span>
+                    <span>
+                        <a href="상점페이지" target="_blank">상점명 <i class="fas fa-external-link-alt"></i></a>
+                    </span>
+                </div>
+                <div class="delivery_charge">
+                    <span>배송비</span>
+                    <!--배송비 포함시 0원 / 미포함 시 3000원(?)-->
+                    <span>0원</span>
+                </div>
+            </div>
+            <div class="delivery_info">
+                <h2>운송장정보</h2>
+                <p>상품이 구매자에게 전달되었습니다.</p>
+                <!--
+                    상품이 판매자에게 전달되었습니다.
+                -->
+
+                <!--반품 시-->
+                <!--
+                    <h2>반품정보</h2>
+                    <p>상품이 판매자에게 전달되었습니다.</p>
+                -->
+            </div>
+            <!--반품 시-->
+            <!--
+                <div class="return_charge">
+                    <h2>환불금액</h2>
+                    <p>500원</p>
+                </div>
+            -->    
+        </div>
+        <!--푸터-->
+        <footer>
+            “BGZT Digital”, “BGZT Lab 1”, “BGZT Lab 2”, “BGZT 컬렉션” 상점의 판매상품을 제외한 모든 상품들에 대하여, 
+            번개장터㈜는 통신판매중개자로서 중고거래마켓 번개장터의 거래당사자가 아니며, 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.
+        </footer>
+    </div>
+</body>
+</html>
